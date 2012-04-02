@@ -16,10 +16,22 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class Card;
 
-@property (strong, nonatomic) UIWindow *window;
+#define DATABASE_NAME "buzzwords.db"
+
+@interface Deck : NSObject
+{
+    sqlite3 *database;
+    NSArray *frontCache;
+    NSArray *backCache;
+}
+
+-(Deck*) init;
+-(Card*) getCard;
+-(void) freshenCaches;
 
 @end

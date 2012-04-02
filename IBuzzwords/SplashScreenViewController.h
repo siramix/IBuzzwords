@@ -18,8 +18,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface SplashScreenViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
+-(IBAction)goToMainMenu:(id)sender;
 
 @end

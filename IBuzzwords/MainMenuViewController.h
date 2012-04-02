@@ -18,8 +18,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface MainMenuViewController : UIViewController
+{
+    UILabel *playLabel;
+    UILabel *buzzLabel;
+    UILabel *settingsLabel;
+    UILabel *rulesLabel;
+}
 
-@property (strong, nonatomic) UIWindow *window;
+@property(nonatomic,retain) IBOutlet UILabel *playLabel;
+@property(nonatomic,retain) IBOutlet UILabel *buzzLabel;
+@property(nonatomic,retain) IBOutlet UILabel *settingsLabel;
+@property(nonatomic,retain) IBOutlet UILabel *rulesLabel;
 
 @end

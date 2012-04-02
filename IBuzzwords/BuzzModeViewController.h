@@ -18,8 +18,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class AVAudioPlayer;
 
-@property (strong, nonatomic) UIWindow *window;
+@interface BuzzModeViewController : UIViewController
+{
+    UIButton* buzzButton;
+}
+
+@property(nonatomic,retain) IBOutlet UIButton *buzzButton;
+
+@property (nonatomic, retain) AVAudioPlayer *player;
+
+-(IBAction)startBuzzer:(id)sender;
+-(IBAction)stopBuzzer:(id)sender;
 
 @end
